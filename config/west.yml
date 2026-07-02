@@ -5,9 +5,12 @@ manifest:
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
   projects:
+    # Pinned to v0.3.0: matches what the mctechnology17 module targets, and
+    # avoids upstream breaks from tracking main (e.g. the Zephyr 4.1 board
+    # rename). zmk main is currently incompatible with the module.
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3.0
       import: app/west.yml
     # Provides the corne dongle + peripheral shields (corne_dongle_pro_micro,
     # corne_left_peripheral, corne_right). Discovered as a Zephyr module.
