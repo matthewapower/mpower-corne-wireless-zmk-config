@@ -13,12 +13,15 @@
 #
 ---
 include:
+  # ZMK on Zephyr 4.1 (Dec 2025) renamed the board:
+  # nice_nano_v2 -> nice_nano//zmk  (== nice_nano@2.0.0//zmk)
+  #
   # Dongle = central (plugged into computer via USB). Holds the keymap.
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: corne_dongle_pro_micro
   # Both halves are now peripherals, so the left no longer acts as
   # central relaying the right -> much less battery drain.
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: corne_left_peripheral
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: corne_right
